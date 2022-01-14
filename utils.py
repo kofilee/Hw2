@@ -11,7 +11,7 @@ def read_data(number, test):
         path = 'd' + fault_number + '_te'
     else:
         path = 'd' + fault_number
-    path = os.getcwd() + 'data/' + path + ".dat"
+    path = os.getcwd() + '/data/' + path + ".dat"
     data = np.loadtxt(path)
     if not (number or test):
         data = data.T
@@ -23,11 +23,11 @@ def read_data(number, test):
 
 def standardization(data, fit):
     scalar = StandardScaler()
-    if fit == 1:
+    if fit == 0:
         scalar.fit(data)
-        dump(scalar, open('scaler.pkl', 'wb'))
+        dump(scalar, open('scalar.pkl', 'wb'))
     else:
-        scalar = load(open('scaler.pkl', 'rb'))
+        scalar = load(open('scalar.pkl', 'rb'))
     stand_data = scalar.transform(data)
     return stand_data
 
