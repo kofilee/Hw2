@@ -39,13 +39,6 @@ def parse_args():
         type=int,
         metavar='')
     parser.add_argument(
-        '-r',
-        '--restore',
-        help='To restore model from cpk (default = False)',
-        default=1,
-        type=int,
-        metavar='')
-    parser.add_argument(
         '-te',
         '--te',
         help='Testing (default = False)',
