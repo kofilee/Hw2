@@ -8,13 +8,13 @@ from data_loader import data_loader
 
 
 def parse_args():
-    desc = "Tensorflow by Kofi"
+    desc = "Hw2 by Kofi"
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument(
         '-type',
         '--net_type',
         help='Net type (DNN or CNN or RNN) (default = RNN)',
-        default='CNN',
+        default='RNN',
         type=str,
         metavar='')
     parser.add_argument(
